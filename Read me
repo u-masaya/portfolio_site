@@ -1,0 +1,23 @@
+20160404　アルバイト用ポートフォリオ
+
+
+swiper.jsを追加。
+スライダーに自己紹介を追加。
+コンタクトフォームを削除。
+SNS・メールアドレスを追加。
+CSSを整理。
+
+
+ファーストビューの背景ぼかし追加。
+
+index.html 
+#18~29 div.panel div.panel-in div.panel-main (背景ぼかし)
+
+style.css
+HEADER
+ - #115 .panel  ~  #142 .panel-main
+
+imagesフォルダに top.jpg追加
+
+
+上記変更に伴い、スマホ対応のためCSSの書き換え（メディアクエリ以下）

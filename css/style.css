@@ -1,0 +1,557 @@
+@charset: "UTF-8";
+
+/**************************
+* COMMON
+***************************/
+html {
+    font-size: 62.5%;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+body {
+    background: #151515 url('..//images/top.jpg') no-repeat fixed left bottom;
+    background-size: cover;
+    color: #fff;
+    text-align: center;
+    font-size: 1.4rem;
+    font-family: Raleway, "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+
+}
+
+.about-text, work-text, .skill-text {
+    font-family: "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
+
+/**************************
+* PARTS
+***************************/
+.heading {
+    position: relative;
+    display: inline-block;
+    margin: 30px 0 15px;
+    padding-bottom: 15px;
+    letter-spacing: 2px;
+    font-size: 4rem;
+}
+
+.heading::before,
+.heading::after {
+    content: '';
+    display: inline-block;
+    width: 12px;
+    height: 12px;
+    margin: 0 15px;
+    border: 1px solid;
+    vertical-align: 0.2em;
+    -webkit-transform: rotate(45deg);
+       -moz-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+
+.button {
+    display: inline-block;
+    width: 200px;
+    padding: 20px;
+    border-radius: 4px;
+    background-color: #afa58d;
+    color: #FFF;
+    text-decoration: none;
+    letter-spacing: 1px;
+    font-size: 1.2rem;
+}
+
+.buttons .button {
+    margin: 10px;
+}
+
+.button:hover {
+    opacity: 0.9;
+}
+
+.button-showy {
+    background-color: #f1b400;
+}
+
+/**************************
+* HEADER
+***************************/
+.header {
+    padding: 170px 30px 80px;
+}
+
+.site-title-sub {
+    margin: 0 0 30px;
+    letter-spacing: 1px;
+    font-size: 2.2rem;
+}
+
+.site-title-sub::before,
+.site-title-sub::after {
+    content: "";
+    display: inline-block;
+    width: 140px;
+    height: 2px;
+    margin: 0 30px;
+    background-color: #333;
+    vertical-align: middle;
+}
+
+.site-title {
+    margin: 50px 0 40px;
+    font-size: 7.6rem;
+}
+
+.ste-description {
+    margin-bottom: 50px;
+    color: #888;
+    font-size: 1.6rem;
+}
+
+.panel {
+    position: relative;
+}
+.panel-in::before {
+    content: "";
+    position: absolute;
+    background-clip: content-box;
+    width: 100%;
+    height: 100%;
+    padding: 30px;
+    top: 0;
+    left: 0;
+    -webkit-filter: blur(5px);
+    filter: blur(5px);
+}
+.panel-in {
+    padding: 30px;
+    position: relative;
+}
+.panel-main {
+    padding: 30px;
+    z-index: 30;
+    position: relative;
+    margin-bottom: 0;
+    border: solid 1px rgba(255,255,255,0.4);
+    background: rgba(255,255,255,0.4);
+    color: #333;
+}
+
+/**************************
+* ABOUT
+***************************/
+.about {
+    padding: 80px 30px;
+    background-color: #fff;
+    color: #333;
+}
+
+h2.about-me {
+    margin-bottom:75px;
+}
+
+.swiper-container {
+    width: 600px;
+    height: 300px;
+}
+
+.swiper-slide h3 {
+    border-bottom: 1px solid #090909;
+    padding-bottom: 15px;
+    width: 200px;
+    margin: 0 auto;
+}
+
+.swiper-slide p {
+    line-height: 3.5;
+}
+
+/**************************
+* WORKS
+***************************/
+.works {
+    background-color: #383634;
+    padding: 80px 0;
+}
+
+.works-wrapper {
+    display: table;
+    width: 100%;
+    margin-top: 60px;
+    table-layout: fixed;
+}
+
+.work-box {
+    position: relative;
+    display: table-cell;
+}
+
+.work-box {
+    overflow: hidden;
+}
+
+.work-image {
+    -webkit-transition: -webkit-transform 0.5s ease-in-out;
+            transition: transform 0.5s ease-in-out;
+}
+
+.work-box:nth-child(odd) .work-image {
+    transform: top center;
+}
+
+.work-box:nth-child(even) .work-image {
+    transform: bottom center;
+}
+
+.work-box:hover .work-image {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+}
+
+.work-box::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background: no-repeat;
+    background-size: 100% 100%;
+    opacity: 0.2;
+    transform: scaleY(-1);
+}
+
+.work-box.imac::after {
+    background: url('../images/imac.jpg');
+}
+
+.work-box.iphone::after {
+    background: url('../images/iphone.jpg');
+}
+
+.work-box.meeting::after {
+    background: url('../images/meeting.jpg');
+}
+
+.work-box.picjumbo::after {
+    background: url('../images/picjumbo.jpg');
+}
+
+
+.work-box:nth-child(odd) .work-image {
+    margin: 60% 0 0 0;
+}
+
+.work-box:nth-child(odd) .work-description,
+.work-box:nth-child(odd)::after {
+    top: 0;
+}
+
+.work-image {
+    display: block;
+    width: 100%;
+    margin: 0 0 60%;
+}
+
+.work-description {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 100%;
+    height: 50%;
+    overflow-y: auto;
+}
+
+.work-description-inner {
+    display: table;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+}
+
+.work-text {
+    display: table-cell;
+    vertical-align: middle;
+    font-size: 1.2rem;
+    line-height: 2;
+}
+
+.work-text .button {
+    width: 60%;
+    margin-top: 20px;
+    padding: 2px;
+}
+
+.button-ghost {
+    border: 1px solid #fff;
+    background-color: rgba(255, 255, 255, 0.15);
+}
+
+.button-ghost:hover {
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/**************************
+* SKILL
+***************************/
+.skills {
+  padding: 80px 0;
+  background-color: #fff;
+  color: #333;
+}
+.skills-wrapper {
+  display: table;
+  width: 80%;
+  margin: 50px auto 0;
+  table-layout: fixed;
+}
+.skill-box {
+  display: table-cell;
+}
+.skill-icon {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 30px;
+  border: 4px solid;
+  border-radius: 50%;
+  color: #f1b400;
+  font-size: 8rem;
+  line-height: 142px;
+}
+
+.skill-title {
+    margin: 0 20px 20px;
+    font-size: 2rem;
+}
+
+.skill-text {
+    margin: 0 20px;
+    line-height: 2;
+}
+
+/**************************
+* CONTACT
+***************************/
+.contact {
+    padding: 80px 0 150px;
+	background-color: rgba(255, 255, 255, 0.2);
+    color: #333;
+}
+
+#contact #links {
+    width: 750px;
+    margin: 5% auto;
+    padding: 0;
+}
+
+ul#links {
+    overflow: hidden;
+}
+
+#contact #links li:first-child {
+    margin-left: 13%;
+}
+
+#contact #links li {
+	list-style-type: none;
+	float: left;
+	width: 100px;
+	height: 100px;
+	margin: 0 25px;
+}
+
+#contact #links li a {
+	-webkit-transition: 0.3s;
+}
+
+#contact #links li a:hover {
+	-webkit-transition: 0.3s;
+	opacity: 0.2;
+}
+
+#contact #links li img {
+	width: 100%;
+	height: 100%;
+}
+
+/**************************
+* FOTTER
+***************************/
+.footer {
+    padding: 12px 0;
+    font-size: 1.3rem;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/**************************
+* SMART PHONE
+***************************/
+.header {
+    padding-top: 60px;
+}
+
+.site-title-sub::before,
+.site-title-sub::after {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    }
+
+.site-title-sub {
+    font-size: 1.7rem;
+}
+
+.site-title {
+    margin-top: 35px;
+    font-size: 5rem;
+}
+
+.button:hover {
+    opacity: 1;
+}
+
+/**************************
+* SMART PHONE
+***************************/
+@media(max-width: 1024px){
+    body {
+        /*background-image: none;*/
+    }
+}
+
+@media(max-width: 768px){
+    body {
+        font-size: 1.3rem
+    }
+    .heading::before,
+    .heading::after {
+        width: 8px;
+        height: 8px;
+        margin: 0 12px;
+        vertical-align: 5px;
+    }
+
+    .heading {
+        margin-top: 20px
+        font-size: 2.5rem;
+    }
+
+    .button:hover {
+        opacity: 1;
+    }
+
+    /*** header  ***/
+    .heading {
+        margin-top: 60px
+    }
+
+    .site-title-sub {
+        font-size: 1.7rem;
+    }
+
+    .sitle-title-sub::before,
+    .site-titile-sub:after {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .site-title {
+        margin-top: 35px;
+        font-size: 5rem;
+    }
+
+    /*** about ***/
+    .about-text {
+        line-height: 1.8;
+    }
+
+    .swiper-container {
+        width: 100%;
+    }
+
+    /*** works ***/
+    .works-wrapper,
+    .work-box {
+        display: block;
+    }
+
+    .work-image {
+        display: none;
+    }
+
+    .work-description {
+        position: relative;
+    }
+
+    .work-box::after {
+        top: 0;
+        height: 100%;
+        background-size: cover;
+    }
+
+    /**** skills ***/
+    .skills-wrapper,
+    .skill-box {
+        display: block;
+    }
+
+    .skill-icon {
+        width: 100px;
+        height: 100px;
+        font-size: 5rem;
+        line-height: 92px;
+    }
+
+    .skill-box {
+        margin: 40px auto;
+    }
+
+    .skill-text {
+        margin: 0;
+    }
+
+    /*** contact ***/
+    .contact {
+        padding: 80px 0;
+        background-color: rgba(255, 255, 255, 0.2);
+        color: #333;
+    }
+
+    #contact #links {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+    }
+
+    ul#links {
+        overflow: hidden;
+    }
+
+    #contact #links li {
+        list-style-type: none;
+        float: left;
+        width: 20%;
+        margin: 45px 0;
+        padding: 0;
+    }
+
+    #contact #links li a {
+        -webkit-transition: 0.3s;
+    }
+
+    #contact #links li a:hover {
+        -webkit-transition: 0.3s;
+        opacity: 0.5;
+    }
+
+    #contact #links li img {
+        width: 35%;
+        height: 35%;
+    }
+}
